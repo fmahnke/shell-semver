@@ -33,20 +33,20 @@ fi
 
 if [ ! -z $major ]
 then
-  ((a[0]++))
+  ((++a[0]))
   a[1]=0
   a[2]=0
 fi
 
 if [ ! -z $minor ]
 then
-  ((a[1]++))
+  ((++a[1]))
   a[2]=0
 fi
 
 if [ ! -z $patch ]
 then
-  ((a[2]++))
+  ((++a[2]))
 fi
 
 echo "${a[0]}.${a[1]}.${a[2]}"
