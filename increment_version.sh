@@ -15,7 +15,12 @@ done
 
 shift $(($OPTIND - 1))
 
-version=$1
+if [ -t 0 ]
+then
+    version=$1
+else
+    version=$(cat)
+fi
 
 # Build array from version string.
 
